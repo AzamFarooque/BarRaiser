@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bar Raiser Song Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="BarRaiserSongDetailViewController" id="Y6W-OH-hqX" customClass="BarRaiserSongDetailViewController" customModule="BarRaiser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SKS-lo-yIm">
+                                <rect key="frame" x="0.0" y="59" width="393" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="BbO-xH-nbG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dI-Ss-PsN">
+                                <rect key="frame" x="0.0" y="209" width="393" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U20-1s-0en">
+                                <rect key="frame" x="136.66666666666666" y="408.66666666666669" width="119.99999999999997" height="35"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.5568627451" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="G1m-Qd-9aV"/>
+                                    <constraint firstAttribute="height" constant="35" id="RPw-IO-Kau"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Play Song">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7dI-Ss-PsN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6nC-4t-08b"/>
+                            <constraint firstItem="U20-1s-0en" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="BKb-Ug-A5f"/>
+                            <constraint firstItem="U20-1s-0en" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="EUJ-3d-VBv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7dI-Ss-PsN" secondAttribute="trailing" id="Huj-n0-Fng"/>
+                            <constraint firstItem="7dI-Ss-PsN" firstAttribute="top" secondItem="SKS-lo-yIm" secondAttribute="bottom" id="I9P-Wk-kXa"/>
+                            <constraint firstItem="SKS-lo-yIm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="SWn-9l-KZS"/>
+                            <constraint firstItem="SKS-lo-yIm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="SXF-8I-GNC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SKS-lo-yIm" secondAttribute="trailing" id="age-VL-7Np"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="songImageView" destination="SKS-lo-yIm" id="8KK-rP-uwa"/>
+                        <outlet property="songNameLbl" destination="7dI-Ss-PsN" id="2rk-3E-tFN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
