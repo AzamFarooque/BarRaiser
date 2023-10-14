@@ -13,18 +13,18 @@ let client = BarRaiserAPIManager()
 
 final class BarRaiserSongListTest: XCTestCase {
     
-//    func testMockResponse(){
-//
-//        let expextaion = expectation(description: "SongList")
-//
-//        client.getDummyData(resultType: BarRaiserSongModel.self) { (data , error) in
-//            XCTAssertNil(error)
-//            expextaion.fulfill()
-//
-//            
-//        }
-//
-//        waitForExpectations(timeout: 10)
-//    }
+    func testMockResponse(){
+
+        let expextaion = expectation(description: "SongList")
+        client.getDummyData(resultType: BarRaiserSongModel.self) { (data , error) in
+            XCTAssertNil(error)
+            XCTAssertNotNil(BarRaiserSongModel.self)
+            expextaion.fulfill()
+
+            
+        }
+
+        waitForExpectations(timeout: 10)
+    }
     
 }

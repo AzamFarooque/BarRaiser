@@ -10,7 +10,7 @@ import AVFoundation
 
 class BarRaiserSongDetailViewController: UIViewController {
     var songInfo : BarRaiserSongInfo?
-    var audioPlayer = AVAudioPlayer()
+    var player = AVPlayer()
 
     @IBOutlet weak var songNameLbl: UILabel!
     @IBOutlet weak var songImageView: UIImageView!
@@ -20,11 +20,20 @@ class BarRaiserSongDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        songNameLbl.text = songInfo?.name ?? ""
-        songImageView.image = UIImage(named: songInfo?.imageName ?? "")
-       
-        audioPlayer = try! AVAudioPlayer(contentsOf: URL(string:  songInfo?.songUrl ?? "")!)
-        audioPlayer.play()
+        if let songInfo = songInfo {
+            songNameLbl.text = songInfo.name ?? ""
+            songImageView.image = UIImage(named: songInfo.imageName ?? "")
+            play(url : URL(string: songInfo.songUrl ?? "")!)
+        }
+    }
+    
+    func play(url: URL) {
+        player = AVPlayer(url: url)
+        player.allowsExternalPlayback = true
+        player.appliesMediaSelectionCriteriaAutomatically = true
+        player.automaticallyWaitsToMinimizeStalling = true
+        player.volume = 1
+        player.play()
     }
     
 }

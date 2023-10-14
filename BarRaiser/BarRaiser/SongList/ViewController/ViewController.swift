@@ -45,7 +45,7 @@ extension ViewController {
                     self?.songTableView.reloadData()
                 }
             }else{
-                debugPrint(error)
+                // Error Alert
             }
             
         }
@@ -63,7 +63,7 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = songTableView.dequeueReusableCell(withIdentifier: "BarRaiserSongListTableViewCell", for: indexPath) as! BarRaiserSongListTableViewCell
+        let cell = songTableView.dequeueReusableCell(withIdentifier: BarRaiserSongListTableViewCell.identifier, for: indexPath) as! BarRaiserSongListTableViewCell
         let section = viewModel.songDetail?.songList?[indexPath.row]
         cell.songInfo = section
         return cell
